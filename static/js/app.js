@@ -42,7 +42,7 @@ function buildCharts(sample) {
       mode: "markers",
       marker: {
         color: otuIds,
-        size: sampleValues
+        size: sampleValues,
         colorscale: "Portland" //heatmap = Portland colorscale
       },
       text: otuLabels
@@ -52,7 +52,7 @@ function buildCharts(sample) {
     // Render the Bubble Chart
     let bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
-      xaxis: {title: "OTU ID"}
+      xaxis: {title: "OTU ID"},
       yaxis: {title: "Number of Bacteria"}
     };
     Plotly.newPlot("bubble", bubbleTraces, bubbleLayout);
@@ -67,7 +67,7 @@ function buildCharts(sample) {
       y: barChartInfo.slice(0,10).reverse(),
       type: "bar",
       marker: {
-        colorscale: "Portland"
+        colorscale: "Portland",
         color: sampleValues.slice(0,10).reverse()
       },
       text: otuLabels.slice(0,10).reverse(),
@@ -114,7 +114,7 @@ function init() {
 // Function for event listener
 function optionChanged(newSample) {
   // Build charts and metadata panel each time a new sample is selected
-  console.log("New sample selected:", newSample);
+  //console.log("New sample selected:", newSample);
   buildCharts(newSample);
   buildMetadata(newSample);
 }
