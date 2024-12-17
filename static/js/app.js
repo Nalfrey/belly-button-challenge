@@ -43,7 +43,7 @@ function buildCharts(sample) {
       marker: {
         color: otuIds,
         size: sampleValues,
-        colorscale: "Portland" //heatmap = Portland colorscale
+        colorscale: "Blue" //heatmap = Portland colorscale
       },
       text: otuLabels
     };
@@ -67,7 +67,7 @@ function buildCharts(sample) {
       y: barChartInfo.slice(0,10).reverse(),
       type: "bar",
       marker: {
-        colorscale: "Portland",
+        colorscale: "Blue",
         color: sampleValues.slice(0,10).reverse()
       },
       text: otuLabels.slice(0,10).reverse(),
